@@ -1,26 +1,18 @@
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
 public class CircleTest {
+    public static void main(String[] args) {
+        Circle circle= new Circle();
+        System.out.println(circle);
+        System.out.println(circle.getPerimeter());
+        System.out.println(circle.getArea());
 
-    @Test
-    public void getRadius() {
-    }
+        circle= new Circle(5);
+        System.out.println(circle);
+        System.out.println(circle.getPerimeter());
+        System.out.println(circle.getArea());
 
-    @Test
-    public void setRadius() {
-    }
-
-    @Test
-    public void getArea() {
-    }
-
-    @Test
-    public void getPerimeter() {
-    }
-
-    @Test
-    public void toString1() {
+        circle= new Circle(5, "yellow",false);
+        System.out.println(circle);
+        System.out.println(circle.getPerimeter());
+        System.out.println(circle.getArea());
     }
 }

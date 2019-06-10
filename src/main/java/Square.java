@@ -1,4 +1,4 @@
-public class Square extends Rectangle implements Resizeable{
+public class Square extends Rectangle implements Resizeable,Colorable{
     Square(){
         super(1,1);
     }
@@ -33,6 +33,8 @@ public class Square extends Rectangle implements Resizeable{
                 super.toString();
     }
 
-
-
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides!");
+    }
 }

@@ -1,4 +1,4 @@
-public class Square extends Rectangle{
+public class Square extends Rectangle implements Resizeable{
     Square(){
         super(1,1);
     }
@@ -32,4 +32,7 @@ public class Square extends Rectangle{
                 ",Which is a subclass of "+
                 super.toString();
     }
+
+
+
 }

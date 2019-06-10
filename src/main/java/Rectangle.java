@@ -1,20 +1,21 @@
-public class Rectangle extends Shape{
+public class Rectangle extends Shape implements Resizeable {
     double width;
-        double length;
+    double length;
 
-    Rectangle(){
-        width=1;
-        length=1;
-    }
-    Rectangle(double width, double length){
-        this.width=width;
-        this.length=length;
+    Rectangle() {
+        width = 1;
+        length = 1;
     }
 
-    Rectangle(double width, double length, String color, boolean filled){
-        super(color,filled);
-        this.width=width;
-        this.length=length;
+    Rectangle(double width, double length) {
+        this.width = width;
+        this.length = length;
+    }
+
+    Rectangle(double width, double length, String color, boolean filled) {
+        super(color, filled);
+        this.width = width;
+        this.length = length;
     }
 
     public double getWidth() {
@@ -33,11 +34,12 @@ public class Rectangle extends Shape{
         this.length = length;
     }
 
-    public double getArea(){
-        return width*length;
+    public double getArea() {
+        return width * length;
     }
-    public double getPerimeter(){
-        return 2*(width+length);
+
+    public double getPerimeter() {
+        return 2 * (width + length);
     }
 
     @Override
@@ -45,7 +47,13 @@ public class Rectangle extends Shape{
         return "Rectangle{" +
                 "width=" + width +
                 ", length=" + length +
-                ", Which is a subclass "+super.toString()+
+                ", Which is a subclass " + super.toString() +
                 '}';
+    }
+
+    @Override
+    public void resize(double percent) {
+        length=length*(100+percent)/100;
+        width=width*(100+percent)/100;
     }
 }
